@@ -1,0 +1,23 @@
+{
+  "skill_name": "obsidian-para-notes",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "hey so i just spent the last 2 hours debugging this konflux pipeline that kept failing with ImagePullBackOff errors. turns out the service account didn't have imagePullSecrets configured for the internal registry. i added the secret reference to the SA and now it works. can you document this session in my work notes?",
+      "expected_output": "Creates a session note in a Konflux-related project (or creates new project if needed), adds it to today's daily log, captures the discovery in project's Lessons_Learned, AND adds entry to MASTER-LESSONS-LEARNED.md with category tag and project link",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Quick note: when using kubectl port-forward with Tekton pipelines, you need to forward port 8080 not 80 for the webhook. Save this somewhere",
+      "expected_output": "Creates a quick capture in 00_Inbox with timestamp, optionally suggesting to organize it into a Kubernetes/Tekton resource note",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm starting a new project to migrate our CI/CD from Jenkins to Konflux. The goal is to have all repos migrated by end of Q3 2026. Can you set this up in my PARA notes?",
+      "expected_output": "Creates new project structure in 01_Projects with README.md (goal, timeline, deliverables), Lessons_Learned.md, Sessions/ directory, and updates Home.md with project link",
+      "files": []
+    }
+  ]
+}

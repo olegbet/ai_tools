@@ -1,0 +1,31 @@
+{
+  "eval_id": 2,
+  "eval_name": "create-new-project",
+  "prompt": "I'm starting a new project to migrate our CI/CD from Jenkins to Konflux. The goal is to have all repos migrated by end of Q3 2026. Can you set this up in my PARA notes?",
+  "assertions": [
+    {
+      "name": "Creates project directory structure",
+      "description": "Should create 01_Projects/{project-name}/ with Sessions/ and Resources/ subdirectories"
+    },
+    {
+      "name": "Creates README.md with project details",
+      "description": "README should include goal, timeline (Q3 2026 deadline), status, and deliverables"
+    },
+    {
+      "name": "Creates Lessons_Learned.md",
+      "description": "Should create empty Lessons_Learned.md ready for future discoveries"
+    },
+    {
+      "name": "Updates Home.md",
+      "description": "Should add wikilink to new project in Home.md"
+    },
+    {
+      "name": "Uses proper frontmatter",
+      "description": "README should have frontmatter with title, status: active, start_date, deadline, tags"
+    },
+    {
+      "name": "Follows PARA structure",
+      "description": "Project should be in 01_Projects/ following the PARA organizational method"
+    }
+  ]
+}

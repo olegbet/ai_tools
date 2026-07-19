@@ -1,0 +1,31 @@
+{
+  "eval_id": 0,
+  "eval_name": "document-debugging-session",
+  "prompt": "hey so i just spent the last 2 hours debugging this konflux pipeline that kept failing with ImagePullBackOff errors. turns out the service account didn't have imagePullSecrets configured for the internal registry. i added the secret reference to the SA and now it works. can you document this session in my work notes?",
+  "assertions": [
+    {
+      "name": "Creates or updates daily log",
+      "description": "Should create/update a daily log file in 06_Daily_Logs/ with today's date (2026-06-02.md)"
+    },
+    {
+      "name": "Creates session note",
+      "description": "Should create a session note in a project's Sessions/ directory with session details"
+    },
+    {
+      "name": "Captures discovery in Lessons_Learned",
+      "description": "Should add the imagePullSecrets discovery to project's Lessons_Learned.md"
+    },
+    {
+      "name": "Updates MASTER-LESSONS-LEARNED",
+      "description": "Should add an entry to MASTER-LESSONS-LEARNED.md with project link and category"
+    },
+    {
+      "name": "Links daily log to session",
+      "description": "Daily log should contain a wikilink to the session note"
+    },
+    {
+      "name": "Uses proper Obsidian markdown",
+      "description": "All files should use wikilinks [[Note]] format and proper frontmatter"
+    }
+  ]
+}

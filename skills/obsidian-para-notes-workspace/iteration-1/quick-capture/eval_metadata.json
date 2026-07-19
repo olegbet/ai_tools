@@ -1,0 +1,23 @@
+{
+  "eval_id": 1,
+  "eval_name": "quick-capture",
+  "prompt": "Quick note: when using kubectl port-forward with Tekton pipelines, you need to forward port 8080 not 80 for the webhook. Save this somewhere",
+  "assertions": [
+    {
+      "name": "Creates inbox note",
+      "description": "Should create a timestamped note in 00_Inbox/"
+    },
+    {
+      "name": "Includes timestamp in filename",
+      "description": "Inbox filename should include date/time (YYYYMMDD-HHMMSS format)"
+    },
+    {
+      "name": "Uses proper frontmatter",
+      "description": "Should have frontmatter with 'captured' timestamp"
+    },
+    {
+      "name": "Optionally creates atomic Resource note",
+      "description": "May suggest or create a Resource note following atomic notes principle (one topic: kubectl port-forward for Tekton)"
+    }
+  ]
+}
